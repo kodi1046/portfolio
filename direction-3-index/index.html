@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Index</title>
+  <meta name="description" content="Mathematics, computer science & quantitative finance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" id="brand" href="index.html">Name</a>
+      <nav class="top">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#articles">Writing</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Portfolio · 2026</div>
+            <h1 id="hero-name">Name</h1>
+            <p class="role" id="hero-role"></p>
+            <p class="lede" id="hero-lede"></p>
+            <div class="cta" id="hero-cta"></div>
+          </div>
+          <div class="hero-art">
+            <svg id="hero-svg" viewBox="0 0 400 400"></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="block reveal" id="about">
+        <div class="sec-head"><span class="n">01</span><h2>About</h2></div>
+        <div id="about-body"></div>
+      </section>
+
+      <section class="block reveal" id="papers">
+        <div class="sec-head"><span class="n">02</span><h2>Papers &amp; Publications</h2><span class="count" id="papers-count"></span></div>
+        <div id="papers-body"></div>
+      </section>
+
+      <section class="block reveal" id="articles">
+        <div class="sec-head"><span class="n">03</span><h2>Writing</h2></div>
+        <div id="articles-body"></div>
+      </section>
+
+      <section class="block reveal" id="projects">
+        <div class="sec-head"><span class="n">04</span><h2>Projects</h2></div>
+        <div id="projects-body"></div>
+      </section>
+
+      <section class="block reveal" id="cv">
+        <div class="sec-head"><span class="n">05</span><h2>Experience</h2></div>
+        <div id="experience-body"></div>
+      </section>
+
+      <section class="block reveal" id="education">
+        <div class="sec-head"><span class="n">06</span><h2>Education</h2></div>
+        <div id="education-body"></div>
+      </section>
+
+      <section class="block reveal" id="contact">
+        <div class="sec-head"><span class="n">07</span><h2>Contact</h2></div>
+        <div id="contact-body"></div>
+      </section>
+
+      <footer>
+        <span>© 2026 · Static site</span>
+        <span><a href="../index.html">← All design directions</a></span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../shared/data.js"></script>
+  <script src="../shared/reader.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="badge" id="badge">LI</span>Writing</a>
+      <nav class="top">
+        <a class="keep" href="index.html#articles">← All writing</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reader">
+    <a class="back" href="index.html#articles">← All writing</a>
+    <h1 id="article-title">Loading…</h1>
+    <div id="article-meta"></div>
+    <div id="article-tags"></div>
+    <article id="article-body"></article>
+  </main>
+
+  <script src="../shared/data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script src="../shared/reader.js"></script>
+  <script>
+    // theme + badge
+    (function () {
+      var root = document.documentElement;
+      var saved = localStorage.getItem("idx-theme");
+      if (saved) root.setAttribute("data-theme", saved);
+      else if (matchMedia("(prefers-color-scheme: dark)").matches) root.setAttribute("data-theme", "dark");
+      var sun = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>';
+      var moon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+      var t = document.getElementById("theme-toggle");
+      function paint() { t.innerHTML = root.getAttribute("data-theme") === "dark" ? sun : moon; }
+      paint();
+      t.addEventListener("click", function () {
+        var n = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", n); localStorage.setItem("idx-theme", n); paint();
+      });
+      if (window.PORTFOLIO_DATA) document.getElementById("badge").textContent = PORTFOLIO_DATA.initials;
+    })();
+    window.addEventListener("load", function () {
+      ArticleEngine.renderArticlePage({ base: "../shared", listHref: "index.html#articles" });
+    });
+  </script>
+</body>
+</html>

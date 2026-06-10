@@ -1,0 +1,4 @@
+{
+  "_comment": "Manifest of articles. To add one: drop a .md file in shared/articles/ and add an entry here (or run `node build-articles.mjs`). Newest first. Empty for now — your real articles go here.",
+  "articles": []
+}

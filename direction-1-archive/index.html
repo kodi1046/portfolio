@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Archive</title>
+  <meta name="description" content="Mathematics, computer science & quantitative finance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" id="brand" href="index.html">Name.</a>
+      <nav class="top">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#articles">Writing</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a class="cv" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="wrap">
+        <div class="eyebrow">Portfolio · 2026</div>
+        <h1 id="hero-name">Name</h1>
+        <p class="lede" id="hero-lede"></p>
+        <div class="meta" id="hero-meta"></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="block reveal" id="about">
+        <div class="sec-head"><div class="sec-num">01</div><h2 class="sec-title">About</h2></div>
+        <div class="sec-body" id="about-body"></div>
+      </section>
+
+      <section class="block reveal" id="papers">
+        <div class="sec-head"><div class="sec-num">02</div><h2 class="sec-title">Papers &amp; Publications</h2></div>
+        <div class="sec-body" id="papers-body"></div>
+      </section>
+
+      <section class="block reveal" id="articles">
+        <div class="sec-head"><div class="sec-num">03</div><h2 class="sec-title">Writing</h2></div>
+        <div class="sec-body" id="articles-body"></div>
+      </section>
+
+      <section class="block reveal" id="projects">
+        <div class="sec-head"><div class="sec-num">04</div><h2 class="sec-title">Projects</h2></div>
+        <div class="sec-body" id="projects-body"></div>
+      </section>
+
+      <section class="block reveal" id="cv">
+        <div class="sec-head"><div class="sec-num">05</div><h2 class="sec-title">Experience</h2></div>
+        <div class="sec-body" id="experience-body"></div>
+      </section>
+
+      <section class="block reveal" id="education">
+        <div class="sec-head"><div class="sec-num">06</div><h2 class="sec-title">Education</h2></div>
+        <div class="sec-body" id="education-body"></div>
+      </section>
+
+      <section class="block reveal" id="contact">
+        <div class="sec-head"><div class="sec-num">07</div><h2 class="sec-title">Contact</h2></div>
+        <div class="sec-body" id="contact-body"></div>
+      </section>
+
+      <footer>
+        <span>© 2026 · Built as a static site</span>
+        <span><a href="../index.html">← All design directions</a></span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../shared/data.js"></script>
+  <script src="../shared/reader.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

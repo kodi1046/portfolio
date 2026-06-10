@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konstantin Dimitriadis Lorenz</title>
+  <meta name="description" content="Mathematics, computer science & quantitative finance. Reimagining markets through symmetry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="bg-grid" data-depth="0.04"></div>
+
+  <div class="shell">
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="side">
+      <div class="handle" id="side-handle">kodi1046</div>
+      <div class="nm" id="side-name">Name</div>
+      <div class="role" id="side-role"></div>
+      <div class="tag" id="side-tag"></div>
+
+      <nav class="idx">
+        <a href="#about"><span class="n">01</span> about</a>
+        <a href="#focus"><span class="n">02</span> focus</a>
+        <a href="#papers"><span class="n">03</span> papers</a>
+        <a href="#posts"><span class="n">04</span> posts</a>
+        <a href="#writing"><span class="n">05</span> writing</a>
+        <a href="#projects"><span class="n">06</span> projects</a>
+        <a href="#experience"><span class="n">07</span> experience</a>
+        <a href="#skills"><span class="n">08</span> skills</a>
+        <a href="#contact"><span class="n">09</span> contact</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <div class="status"><span class="dot"></span> available for internships</div>
+      <div class="socials" id="side-socials"></div>
+      <div class="meta-foot">
+        <span id="side-loc">—</span>
+        <span><span id="side-clock"></span> · <button class="snd" id="snd-toggle">snd: off</button></span>
+      </div>
+    </aside>
+
+    <!-- ============ CONTENT ============ -->
+    <main class="content">
+      <section class="hero" id="top">
+        <div class="hero-math" id="hero-math" aria-hidden="true"></div>
+        <div class="kick">portfolio — 2026</div>
+        <h1 id="hero-name">Konstantin Dimitriadis Lorenz</h1>
+        <p class="line" id="hero-line"></p>
+        <p class="intro" id="hero-intro"></p>
+        <div class="meta" id="hero-meta"></div>
+        <div class="cta" id="hero-cta"></div>
+
+        <div class="chart-wrap">
+          <div class="chart-head">
+            <span class="ttl"><b>SIM</b> · geometric Brownian motion</span>
+            <span class="params">μ=0.08 σ=0.22 — hover to scrub</span>
+          </div>
+          <canvas id="price-canvas"></canvas>
+          <div class="chart-foot">
+            <span class="ro">price <b id="px-last">—</b></span>
+            <span class="ro">return <b id="px-chg">—</b></span>
+            <span class="ro">step <b id="px-day">—</b></span>
+            <span class="hint">↳ hover the chart to scrub</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="block reveal" id="about">
+        <div class="sec-head"><h2 class="h" data-scramble="about">about</h2></div>
+        <div id="about-body"></div>
+      </section>
+
+      <section class="block reveal" id="focus">
+        <div class="sec-head"><h2 class="h" data-scramble="focus">focus</h2></div>
+        <div id="focus-body"></div>
+      </section>
+
+      <section class="block reveal" id="papers">
+        <div class="sec-head"><h2 class="h" data-scramble="research">research</h2><span class="count" id="papers-count"></span></div>
+        <div id="papers-body"></div>
+      </section>
+
+      <section class="block reveal" id="posts">
+        <div class="sec-head"><h2 class="h" data-scramble="posts">posts</h2><span class="count" id="posts-count"></span></div>
+        <div id="posts-body"></div>
+      </section>
+
+      <section class="block reveal" id="writing">
+        <div class="sec-head"><h2 class="h" data-scramble="writing">writing</h2><span class="count" id="articles-count"></span></div>
+        <div id="articles-body"></div>
+      </section>
+
+      <section class="block reveal" id="projects">
+        <div class="sec-head"><h2 class="h" data-scramble="projects">projects</h2><span class="count" id="projects-count"></span></div>
+        <div id="projects-body"></div>
+      </section>
+
+      <section class="block reveal" id="experience">
+        <div class="sec-head"><h2 class="h" data-scramble="experience">experience</h2></div>
+        <div id="experience-body"></div>
+      </section>
+
+      <section class="block reveal" id="education">
+        <div class="sec-head"><h2 class="h" data-scramble="education">education</h2></div>
+        <div id="education-body"></div>
+      </section>
+
+      <section class="block reveal" id="skills">
+        <div class="sec-head"><h2 class="h" data-scramble="skills &amp; languages">skills &amp; languages</h2></div>
+        <div id="skills-body"></div>
+      </section>
+
+      <section class="block reveal" id="contact">
+        <div class="sec-head"><h2 class="h" data-scramble="contact">contact</h2></div>
+        <div id="contact-body"></div>
+      </section>
+
+      <footer>
+        <span>© 2026 Konstantin Dimitriadis Lorenz · static build</span>
+        <span><a href="../index.html">← design directions</a></span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/reader.js"></script>
+  <script src="motion.js"></script>
+  <script src="chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
