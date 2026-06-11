@@ -244,8 +244,11 @@ footer { padding: 40px 0 0; border-top: 1px solid var(--border); display: flex; 
 footer a { color: var(--muted); } footer a:hover { color: var(--accent); }
 
 /* posts (LinkedIn embeds) */
-.posts-grid { display: flex; flex-wrap: wrap; gap: 18px; }
-.post-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel-2); width: 504px; max-width: 100%; transition: border-color .2s, transform .25s; will-change: transform; }
+.posts-grid { display: flex; flex-wrap: nowrap; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.posts-grid::-webkit-scrollbar { height: 6px; }
+.posts-grid::-webkit-scrollbar-track { background: transparent; }
+.posts-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.post-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel-2); width: 360px; flex-shrink: 0; scroll-snap-align: start; transition: border-color .2s, transform .25s; will-change: transform; }
 .post-card:hover { border-color: var(--sec, var(--accent)); transform: translateY(-3px); }
 .post-card .pc-head { display: flex; align-items: center; gap: 9px; padding: 11px 16px; border-bottom: 1px solid var(--border); font-size: 11.5px; color: var(--muted); }
 .post-card .pc-head .ic { width: 15px; height: 15px; color: var(--sec, var(--accent)); flex-shrink: 0; }
@@ -253,9 +256,9 @@ footer a { color: var(--muted); } footer a:hover { color: var(--accent); }
 .post-card .pc-head .ext { margin-left: auto; color: var(--dim); font-size: 10.5px; flex-shrink: 0; white-space: nowrap; }
 .post-card .pc-head .ext::after { content: " \2197"; }
 .post-card .pc-frame { position: relative; width: 100%; background: #fff; }
-.post-card iframe { display: block; width: 100%; height: 668px; border: 0; }
+.post-card iframe { display: block; width: 100%; height: 470px; border: 0; }
 .posts-empty { font-size: 13px; color: var(--dim); border: 1px dashed var(--border-2); border-radius: 10px; padding: 22px 24px; }
-@media (max-width: 560px){ .post-card iframe { height: 620px; } }
+@media (max-width: 560px){ .post-card { width: 300px; } .post-card iframe { height: 420px; } }
 
 /* reveal */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
