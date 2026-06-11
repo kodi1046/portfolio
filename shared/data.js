@@ -179,7 +179,11 @@ window.PORTFOLIO_DATA = {
   posts: [
     {
       embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7468804869844336640?collapsed=1",
-      caption: "Latest from LinkedIn"
+      caption: "The geometric meaning of Expected Value & Variance"
+    },
+    {
+       embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7470770625888845824?collapsed=1",
+       caption: "What is Geometric Deep Leaning"
     }
   ],
 
