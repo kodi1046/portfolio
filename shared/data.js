@@ -184,6 +184,10 @@ window.PORTFOLIO_DATA = {
     {
        embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7470770625888845824?collapsed=1",
        caption: "What is Geometric Deep Leaning"
+    },
+    {
+       embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7471559938520199169?collapsed=1",
+       caption: "The Martingale Representation Theorem & Replicating Strategies"
     }
   ],
 
