@@ -188,6 +188,10 @@ window.PORTFOLIO_DATA = {
     {
        embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7471559938520199169?collapsed=1",
        caption: "The Martingale Representation Theorem & Replicating Strategies"
+    },
+    {
+       embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7472704336909881345?collapsed=1",
+       caption: "The Radon-Nikodym Theorem for Probability"
     }
   ],
 
