@@ -192,6 +192,10 @@ window.PORTFOLIO_DATA = {
     {
        embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7472704336909881345?collapsed=1",
        caption: "The Radon-Nikodym Theorem for Probability"
+    },
+    {
+       embed: "https://www.linkedin.com/embed/feed/update/urn:li:share:7475352431648915456?collapsed=1" ,
+       caption: "What is Alpha & Beta"
     }
   ],
 
