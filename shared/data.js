@@ -16,28 +16,38 @@ window.PORTFOLIO_DATA = {
 
   /* ---- About (each string = a paragraph) --------------------------------- */
   about: [
-    "I love exploring and understanding the world through a quantitative lens — whether it's a language, a financial market, or behavior, I want to understand it from fundamental principles.",
+    "I'm drawn to the intersection of markets with math. Analyzing markets through a quantitative lens, using stochastic dynamics and geometry.",
     "That instinct pulls me toward the structure underneath things: the symmetries, invariants, and dynamics that markets and mathematics share. I build the theory, then write the code that puts it to work."
   ],
 
   /* ---- Quick facts (status / sidebar) ------------------------------------ */
   facts: [
     { label: "Studying", value: "B.S. Computer Science · Uppsala University" },
-    { label: "Standing", value: "3.97 / 4.00 CGPA · grad. 2027" },
+    { label: "Standing", value: "3.9 / 4.0 CGPA · grad. 2027" },
     { label: "Next", value: "Exchange — University of Tokyo, Oct 2026" },
     { label: "Open to", value: "Quant research internships" }
   ],
 
   /* ---- Focus areas (grouped tags) ---------------------------------------- */
   focus: [
-    { group: "Quant finance", items: ["Momentum strategies", "Market symmetries", "Portfolio optimization", "Dynamic risk budgeting"] },
-    { group: "Mathematics", items: ["Functional analysis", "Group theory", "Differential geometry", "Stochastic calculus", "Machine learning"] },
-    { group: "Engineering", items: ["Numerical methods", "High-performance C++", "Research → implementation"] }
+    { group: "Quant finance", items: ["Time Series Analysis", "Portfolio Management", "Risk Analysis"] },
+    { group: "Mathematics", items: ["Probability", "Statistics", "Analysis", "Linear Algebra", "Stochastic Calculus", "Geometry"] },
+    { group: "Engineering", items: ["Numerical methods", "Optimization", "Data Analysis", "R&D"] }
   ],
 
   /* ---- Papers & publications --------------------------------------------- */
   // status: "published" | "submitted" | "preprint" | "working"
   papers: [
+    {
+      title: "A Single-Asset Statistical Field Theory for Financial Asset Returns",
+      subtitle: "",
+      authors: "Konstantin Dimitriadis Lorenz",
+      venue: "Note",
+      status: "Preprint",
+      year: "2026",
+      abstract: "We construct a single-asset statistical field theory that unifies multifractal volatility cascades and non-reciprocal order-flow dynamics to robustly reproduce Cont's stylized facts across timescales. By exploiting an exact shift symmetry of the log-price, a Ward identity rigorously protects the no-arbitrage condition to all orders in perturbation theory, recovering both classical no-arbitrage pricing and market efficiency as distinct limits.",
+      links: [{label: "Paper", href: "https://www.linkedin.com/feed/update/urn:li:activity:7485002818462834688/"}]  
+    },
     {
       title: "The Uncertainty Principle in Time-Series Momentum",
       subtitle: "A signal-processing bound on lag, turnover, and regime detection",
@@ -45,80 +55,41 @@ window.PORTFOLIO_DATA = {
       venue: "Preprint",
       status: "preprint",
       year: "2026",
-      abstract: "Momentum strategies filter return series to isolate persistent trends from high-frequency noise. I map the Gabor–Heisenberg uncertainty principle onto three operational floors — signal lag, expected turnover, and regime-detection delay — and show they are irreducible consequences of σt·σξ ≥ 1/4π that no adaptive method or higher-frequency data can remove.",
-      links: [{ label: "PDF", href: "shared/papers/uncertainty-principle-tsmom.pdf" }]
+      abstract: "Momentum strategies filter return series to isolate persistent trends from high-frequency noise. We map the Gabor–Heisenberg uncertainty principle onto three operational floors, signal lag, expected turnover, and regime-detection delay, and show they are irreducible consequences of σt·σξ ≥ 1/4π that no adaptive method or higher-frequency data can remove.",
+      links: [{ label: "Paper", href: "https://www.linkedin.com/feed/update/urn:li:activity:7462972328633823232/"}]
     },
-    {
-      title: "A Metaplectic Momentum Filter",
-      authors: "Konstantin Dimitriadis Lorenz",
-      venue: "Working paper",
-      status: "working",
-      year: "2026",
-      abstract: "In progress. A momentum-detection filter built on the metaplectic representation — exploiting phase-space symmetry to separate trend from noise. A numerical validation notebook accompanies the derivation.",
-      links: [{ label: "Validation notebook", href: "shared/papers/metaplectic_filter_validation.ipynb" }]
-    },
-    {
-      title: "Dynamic Risk Budgeting through Control",
-      authors: "Konstantin Dimitriadis Lorenz",
-      venue: "Working paper",
-      status: "working",
-      year: "2026",
-      abstract: "In progress. Treating a portfolio's risk budget as a controlled process, and solving for allocation policies that adapt to changing market regimes.",
-      links: [{ label: "Coming soon", href: "#" }]
-    }
   ],
 
   /* ---- Projects (from CV) ------------------------------------------------ */
   // Replace href with specific repo URLs when you have them.
   projects: [
+     {
+        name: "PBTC5",
+        blurb: "Polymarket 5-min crypto market bot, built with Claude Code.",
+        tags: ["Trading Bot", "Claude Code"],
+        period: "2026",
+        href: "https://github.com/kodi1046/PBTC5"
+     },
     {
-      name: "HVol",
-      blurb: "A Heston stochastic-volatility simulator in C++ for option pricing: the Carr–Madan quasi-closed-form for European options, Monte-Carlo for vanilla and exotic payoffs, a radix-2 DIT FFT, and Heston parameter calibration.",
-      tags: ["C++", "FFT", "Monte Carlo", "Calibration"],
-      period: "2026 — present",
-      href: "https://github.com/kodi1046"
-    },
-    {
-      name: "Quant.py",
-      blurb: "A modular Python backtesting engine for trading strategies and option portfolios — pluggable pricing engines (Black–Scholes, Monte Carlo), GBM and jump-diffusion simulation, delta hedging, Greeks, and portfolio tracking over historical or synthetic data.",
-      tags: ["Python", "Backtesting", "Options", "Greeks"],
-      period: "2026 — present",
-      href: "https://github.com/kodi1046"
-    },
-    {
-      name: "Reference-counting Garbage Collector",
-      blurb: "A reference-counting garbage collector implemented in C (joint project).",
-      tags: ["C", "Memory management"],
-      period: "2025 — 2026",
-      href: "https://github.com/kodi1046"
-    },
+      name: "OnBoard",
+      blurb: "Collaborative whiteboard built using WebSockets, and Bun.",
+      tags: ["Web Development", "JavaScript"],
+      period: "2026",
+      href: "https://github.com/OSPP-Haboob/Haboob"
+    }, 
     {
       name: "Symbolic Calculator",
-      blurb: "A symbolic calculator in Java using Pratt parsing and the visitor pattern for AST traversal (two-person project).",
-      tags: ["Java", "Parsing", "AST"],
+      blurb: "A Symbolic Calculator built in Java.",
+      tags: ["Parsing", "Java"],
       period: "2025",
-      href: "https://github.com/kodi1046"
-    },
-    {
-      name: "Minesweeper",
-      blurb: "A terminal-based Minesweeper game written in TypeScript (joint project).",
-      tags: ["TypeScript", "CLI"],
-      period: "2025",
-      href: "https://github.com/kodi1046"
-    },
-    {
-      name: "Chat App",
-      blurb: "A real-time chat application built in Django with WebSockets (two-person project).",
-      tags: ["Python", "Django", "WebSockets"],
-      period: "2024",
-      href: "https://github.com/kodi1046"
+      href: "",
     },
     {
       name: "Space Game",
       blurb: "A space-themed 2D single-player story game built in Godot.",
       tags: ["Godot", "Game dev"],
       period: "2024",
-      href: "https://github.com/kodi1046"
+      href: ""
     }
   ],
 
@@ -201,7 +172,7 @@ window.PORTFOLIO_DATA = {
 
   /* ---- Contact & links --------------------------------------------------- */
   email: "boid@tutamail.com",
-  resumeHref: "shared/resume.pdf",
+  resumeHref: "https://www.linkedin.com/in/konstantin-dimitriadis-lorenz-1684a2391/overlay/1781092858322/single-media-viewer/?profileId=ACoAAGBbuGABskb7TNf5k7KvpREZeT7frNWlOOw",
   links: [
     { label: "GitHub", href: "https://github.com/kodi1046", handle: "@kodi1046" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/konstantin-dimitriadis-lorenz-1684a2391/", handle: "Konstantin D. Lorenz" },
